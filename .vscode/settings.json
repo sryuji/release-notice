@@ -1,0 +1,41 @@
+{
+  "editor.tabSize": 2,
+  "eslint.run": "onSave",
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    {
+      "language": "html",
+      "autoFix": true
+    }
+  ],
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
+  // 以降はvscodeのワークスペース設定に記載
+  // "editor.formatOnSave": true,
+  // "javascript.format.enable": false,
+  // "javascript.validate.enable": false,
+  // "stylelint.enable": false, // prettier経由で使うため
+  // "prettier.eslintIntegration": false,
+  // "prettier.stylelintIntegration": true,
+  // "vetur.format.defaultFormatter.html": "js-beautify-html",
+  // "vetur.format.defaultFormatter.scss": "prettier",
+  // "vetur.format.defaultFormatter.css": "prettier",
+  // "vetur.format.defaultFormatter.js": "none",
+  // "vetur.format.defaultFormatter.ts": "none",
+  // "vetur.validation.script": false,
+  // "vetur.validation.style": false,
+  // "vetur.validation.template": false
+}
