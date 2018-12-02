@@ -1,4 +1,5 @@
 /* eslint-disable typescript/no-var-requires */
+const customRoutes = require('./vue/routes')
 const pkg = require('./package')
 
 module.exports = {
@@ -25,12 +26,12 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [],
+  css: ['./assets/stylesheets/config/_bulma.scss'],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: ['~/vue/main.ts'],
 
   /*
   ** Nuxt.js modules
@@ -39,9 +40,19 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     // Doc: https://buefy.github.io/#/documentation
-    'nuxt-buefy',
+    ['nuxt-buefy', { css: false }],
     '~/modules/typescript.js',
   ],
+
+  router: {
+    middleware: 'user-agent',
+    extendRoutes(routes, resolve) {
+      customRoutes.forEach(r => {
+        const route = Object.assign({}, r, { component: resolve(__dirname, r.component) })
+        routes.push(route)
+      })
+    },
+  },
   /*
   ** Axios module configuration
   */
@@ -61,7 +72,7 @@ module.exports = {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
-          test: /\.(js|vue)$/,
+          test: /\.(js|ts|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/,
         })

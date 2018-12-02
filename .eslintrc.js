@@ -23,6 +23,7 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'require-jsdoc': 'off',
+    'typescript/member-delimiter-style': 'off',
     'prettier/prettier': [
       'error',
       // eslint側にrule反映するため, prittierrcでなくこちらに記載

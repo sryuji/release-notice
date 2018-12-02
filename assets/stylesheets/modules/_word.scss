@@ -1,0 +1,23 @@
+// ellipsis はblockをoverした場合の省略記号付き省略
+// https://developer.mozilla.org/ja/docs/Web/CSS/text-overflow
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin brackets($begin, $end) {
+  &::before {
+    content: $begin;
+  }
+
+  &::after {
+    content: $end;
+  }
+}
+
+@mixin hide-text {
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}

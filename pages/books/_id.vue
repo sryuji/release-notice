@@ -14,7 +14,7 @@ import Item from '@/components/item'
 
 let items: object[] = [
   {
-    title: '信長のシェフ　23',
+    title: '信長のシェフ',
     image: '',
     creators: [],
     description: null,
@@ -24,7 +24,12 @@ let items: object[] = [
 @Component({
   components: { Item },
 })
-export default class Home extends Vue {
+export default class Book extends Vue {
   items: object[] = items
+
+  // https://ja.nuxtjs.org/api/pages-validate/
+  validate({ params }): boolean {
+    return /^\d+$/.test(params.id)
+  }
 }
 </script>

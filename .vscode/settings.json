@@ -20,17 +20,37 @@
       "autoFix": true
     }
   ],
+  "eslint.packageManager": "yarn",
+  "eslint.options": {
+    "configFile": ".eslintrc.js"
+  },
   "css.validate": false,
   "less.validate": false,
-  "scss.validate": false
+  "scss.validate": false,
+  "editor.formatOnSave": false,
+  "[scss]": {
+    // prettierを直接利用
+    "editor.formatOnSave": true
+  },
+  "prettier.eslintIntegration": false,
+  "prettier.stylelintIntegration": true,
+  "jsDocCompletion.enabled": false,
   // 以降はvscodeのワークスペース設定に記載
-  // "editor.formatOnSave": true,
+  //
   // "javascript.format.enable": false,
   // "javascript.validate.enable": false,
-  // "stylelint.enable": false, // prettier経由で使うため
+  // "typescript.format.enable": false,
+  // "typescript.validate.enable": false,
+  // "stylelint.enable": true,
   // "prettier.eslintIntegration": false,
   // "prettier.stylelintIntegration": true,
-  // "vetur.format.defaultFormatter.html": "js-beautify-html",
+  // "vetur.format.defaultFormatter.html": "prettyhtml",
+  // "vetur.format.defaultFormatterOptions": {
+  // 	"prettyhtml": {
+  // 		"printWidth": 100,
+  // 		"singleQuote": false
+  // 	}
+  // },
   // "vetur.format.defaultFormatter.scss": "prettier",
   // "vetur.format.defaultFormatter.css": "prettier",
   // "vetur.format.defaultFormatter.js": "none",
@@ -38,4 +58,8 @@
   // "vetur.validation.script": false,
   // "vetur.validation.style": false,
   // "vetur.validation.template": false
+  //"path-intellisense.mappings": {
+  //   "@/": "${workspaceRoot}/",
+  //   "~/": "${workspaceRoot}/"
+  // }
 }

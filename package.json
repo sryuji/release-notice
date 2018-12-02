@@ -11,13 +11,15 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore .",
     "stylelint": "prettier-stylelint",
-    "precommit": "npm run lint && npm run stylelint"
+    "precommit": "npm run lint && npm run stylelint",
+    "ts": "ts-node"
   },
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.0-rc2.3",
     "@nuxtjs/axios": "^5.0.0",
     "@nuxtjs/pwa": "^2.6.0",
     "cross-env": "^5.2.0",
+    "date-fns": "^1.29.0",
     "graphql-tag": "^2.10.0",
     "koa": "^2.5.2",
     "nuxt": "^2.0.0",
@@ -40,15 +42,18 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-typescript": "^0.13.0",
     "eslint-plugin-vue": "^4.0.0",
+    "node-sass": "^4.10.0",
     "nodemon": "^1.11.0",
     "prettier": "1.14.3",
     "prettier-stylelint": "^0.4.2",
+    "sass-loader": "^7.1.0",
     "stylelint": "^9.8.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-processor-html": "^1.0.0",
     "stylelint-scss": "^3.4.0",
     "ts-loader": "^5.3.0",
-    "typescript": "^3.1.6",
+    "ts-node": "^7.0.1",
+    "typescript": "~3.1.6",
     "typescript-eslint-parser": "^21.0.1"
   },
   "browserslist": [

@@ -2,7 +2,7 @@
   <section class="container">
     <div class="columns is-multiline">
       <div v-for="item in items" :key="item.title" class="column is-one-quarter">
-        <item :value="item" type="release"></item>
+        <item :value="item" type="product"></item>
       </div>
     </div>
   </section>
@@ -14,7 +14,7 @@ import Item from '@/components/item'
 
 let items: object[] = [
   {
-    title: '信長のシェフ　23',
+    title: '信長のシェフ',
     image: '',
     creators: [],
     description: null,
@@ -24,7 +24,7 @@ let items: object[] = [
 @Component({
   components: { Item },
 })
-export default class Home extends Vue {
+export default class Books extends Vue {
   items: object[] = items
 }
 </script>

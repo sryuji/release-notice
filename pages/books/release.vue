@@ -24,7 +24,7 @@ let items: object[] = [
 @Component({
   components: { Item },
 })
-export default class Home extends Vue {
+export default class BooksRelease extends Vue {
   items: object[] = items
 }
 </script>
