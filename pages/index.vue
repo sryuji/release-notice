@@ -10,21 +10,18 @@
 
 <script lang="ts">
 import { Component, Prop, Emit, Watch, Vue } from 'nuxt-property-decorator'
+import { State, Getter, Action, Mutation, namespace } from 'vuex-class'
 import Item from '@/components/item'
 
-let items: object[] = [
-  {
-    title: '信長のシェフ　23',
-    image: '',
-    creators: [],
-    description: null,
-  },
-]
+const booksModule = namespace('books')
 
 @Component({
   components: { Item },
 })
 export default class Home extends Vue {
-  items: object[] = items
+  @Getter('releaseItems')
+  items
+
+  beforeMount() {}
 }
 </script>

@@ -2,7 +2,7 @@
   <div>
     <div class="" v-if="isRelease">
       <p class="release-date has-text-grey">
-        <span v-if="value.releaseDate">{{ value.releaseDate }}</span>
+        <span v-if="value.releaseDate">{{ value.releaseDate | formatDate }}</span>
         <span v-else>未定</span>
       </p>
     </div>

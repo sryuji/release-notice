@@ -6,8 +6,10 @@ export * from './date'
 // export * from './number'
 export * from './string'
 
-export function toLabel<T extends number | string>(value: T, options: Array<Array<T>>): T {
+type OptionValue = number | string
+type Option = [OptionValue, string]
+export function toLabel(value: OptionValue, options: Option[]): string {
   if (!value || !options) return ''
   const option = options.find(v => v[0] === value)
-  return option ? option[1] : value
+  return option ? option[1] : `${value}`
 }

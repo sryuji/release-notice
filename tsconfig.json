@@ -8,14 +8,16 @@
     "experimentalDecorators": true,
     "noImplicitAny": false,
     "noImplicitThis": false,
-    "strictNullChecks": true,
+    "strictNullChecks": false, // falseでpropertyなどで初期値nullを許容する
     "removeComments": true,
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true,
+    // propertyのdefaultや初期処理漏れのERRORをskip. Partial利用してObject.assignしてる箇所でERRORになるため
+    "strictPropertyInitialization": false,
     "baseUrl": ".",
     "paths": {
+      "@/*": ["./*"],
       "~/*": ["./*"],
-      "@/*": ["./*"]
     },
     "allowJs": false // trueにするとtypescript.jsを処理しようとして失敗してerrorでる
   },
