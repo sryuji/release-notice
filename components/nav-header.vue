@@ -31,34 +31,34 @@
       <nav class="drawer-menu" v-show="isVisibleMenu" @click="isVisibleMenu = false">
         <div class="panel" >
           <p class="panel-heading">本・漫画</p>
-          <nuxt-link class="panel-block" :to="{ name: 'home' }">
+          <nuxt-link class="panel-block" :to="{ name: 'index', query: { tab: 'book' } }">
             新刊
           </nuxt-link>
-          <nuxt-link class="panel-block" :to="{ name: 'home' }">
-            作品/作者
+          <nuxt-link class="panel-block" :to="{ name: 'books', params: { blockBack: true } }">
+            タイトル/作者
           </nuxt-link>
         </div>
         <div class="panel" >
           <p class="panel-heading">音楽</p>
-          <nuxt-link class="panel-block" :to="{ name: 'home' }">
+          <nuxt-link class="panel-block" :to="{ name: 'index', query: { tab: 'music' } }">
             新作
           </nuxt-link>
-          <nuxt-link class="panel-block" :to="{ name: 'home' }">
+          <nuxt-link class="panel-block" :to="{ name: 'musics', params: { blockBack: true } }">
             アーティスト
           </nuxt-link>
         </div>
         <div class="panel" >
           <p class="panel-heading">映像</p>
-          <nuxt-link class="panel-block" :to="{ name: 'home' }">
+          <nuxt-link class="panel-block" :to="{ name: 'index', query: { tab: 'movie' } }">
             新作
           </nuxt-link>
-          <nuxt-link class="panel-block" :to="{ name: 'home' }">
+          <nuxt-link class="panel-block" :to="{ name: 'movies', params: { blockBack: true } }">
             作品
           </nuxt-link>
         </div>
         <div class="panel settings">
           <p class="panel-heading">設定・その他</p>
-          <nuxt-link class="panel-block" :to="{ name: 'home' }">
+          <nuxt-link class="panel-block" :to="{ name: 'settings', params: { blockBack: true } }">
             ログアウト
           </nuxt-link>
         </div>

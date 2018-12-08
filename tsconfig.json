@@ -19,7 +19,11 @@
       "@/*": ["./*"],
       "~/*": ["./*"],
     },
-    "allowJs": false // trueにするとtypescript.jsを処理しようとして失敗してerrorでる
+    "allowJs": false, // trueにするとtypescript.jsを処理しようとして失敗してerrorでる
+    "typeRoots": [
+      "node_modules/@types",
+      "assets/javascripts/types" // ここを読むように変更
+    ]
   },
   "exclude": [
     "node_modules",

@@ -4,7 +4,7 @@
       <nav-header></nav-header>
     </header>
     <section class="main-content section">
-      <keep-alive :include="/^home/">
+      <keep-alive :include="/^index/">
         <nuxt />
       </keep-alive>
     </section>
@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import { Component, Prop, Emit, Watch, Vue } from 'nuxt-property-decorator'
-import NavHeader from '@/components/nav-header'
+import NavHeader from '@/components/nav-header.vue'
 
 @Component({
   components: { NavHeader },

@@ -40,7 +40,7 @@
   // "javascript.format.enable": false,
   // "javascript.validate.enable": false,
   // "typescript.format.enable": false,
-  // "typescript.validate.enable": false,
+  // "typescript.validate.enable": true,
   // "stylelint.enable": true,
   // "prettier.eslintIntegration": false,
   // "prettier.stylelintIntegration": true,
@@ -55,11 +55,12 @@
   // "vetur.format.defaultFormatter.css": "prettier",
   // "vetur.format.defaultFormatter.js": "none",
   // "vetur.format.defaultFormatter.ts": "none",
-  // "vetur.validation.script": false,
+  // "vetur.validation.script": true,
   // "vetur.validation.style": false,
   // "vetur.validation.template": false
   //"path-intellisense.mappings": {
   //   "@/": "${workspaceRoot}/",
   //   "~/": "${workspaceRoot}/"
   // }
+  // "path-intellisense.extensionOnImport": true
 }

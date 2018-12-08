@@ -9,7 +9,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    titleTemplate: '%s | 時間泥棒の誘惑',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -26,7 +26,13 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['./assets/stylesheets/config/_bulma.scss'],
+  css: [
+    './assets/stylesheets/config/_bulma.scss',
+    '@fortawesome/fontawesome-free-webfonts',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-brands.css',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css',
+  ],
 
   /*
   ** Plugins to load before mounting the App
@@ -40,12 +46,12 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     // Doc: https://buefy.github.io/#/documentation
-    ['nuxt-buefy', { css: false }],
+    ['nuxt-buefy', { css: false, materialDesignIcons: false }],
     '~/modules/typescript.js',
   ],
 
   router: {
-    middleware: 'user-agent',
+    middleware: ['user-agent'],
     extendRoutes(routes, resolve) {
       customRoutes.forEach(r => {
         const route = Object.assign({}, r, { component: resolve(__dirname, r.component) })
@@ -53,6 +59,15 @@ module.exports = {
       })
     },
   },
+
+  vue: {
+    config: {
+      productionTip: process.env.NODE_ENV !== 'production',
+      devtools: process.env.NODE_ENV !== 'production',
+      performance: process.env.NODE_ENV !== 'production',
+    },
+  },
+
   /*
   ** Axios module configuration
   */

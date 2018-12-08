@@ -23,7 +23,7 @@ $border: $grey-lighter;
 $border-hover: $grey-light;
 
 // additional my color
-$accent: lighten($primary, 15%);
+$accent: lighten($primary, 20%);
 $accent-invert: findColorInvert($accent);
 $disabled: #c0c4cc;
 $disabled-invert: findColorInvert($disabled);
@@ -35,8 +35,8 @@ $text-light: $grey;
 $text-strong: $grey-darker;
 
 // Links
-$link: $green;
-$link-invert: $green-invert;
+$link: #27c960;
+$link-invert: $link;
 $link-visited: #55966c;
 $link-hover: #55966c;
 $link-hover-border: $grey-light;
@@ -95,5 +95,9 @@ $colors: (
   "accent": (
     $accent,
     $accent-invert
+  ),
+  "invert-accent": (
+    $accent-invert,
+    $accent
   )
 );

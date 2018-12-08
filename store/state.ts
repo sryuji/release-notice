@@ -7,4 +7,5 @@ export default (): RootState => ({
   session: {
     uid: null,
   },
+  ssr: false,
 })

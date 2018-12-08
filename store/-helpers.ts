@@ -6,7 +6,7 @@ export function sortItems(items): Item[] {
   items.sort((a, b) => {
     const pre = a.releaseDate || Constant.FUTURE_DATE
     const cur = b.releaseDate || Constant.FUTURE_DATE
-    return compareAsc(pre, cur)
+    return compareAsc(cur, pre)
   })
   return items
 }

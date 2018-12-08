@@ -1,6 +1,6 @@
 export default interface Item {
   id: string
-  publicId: string
+  productId: string
   title: string
   creators: string[]
   images: string[]
