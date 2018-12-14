@@ -6,17 +6,18 @@
         <h1 class="is-size-3">タイトル/作者</h1>
       </div>
       <div class="buttons">
-        <a class="button is-invert-accent" href="" @click.stop.prevent="">
+        <a class="button is-invert-accent" href="" @click.prevent="openForm(null)">
           <i class="fas fa-plus-circle"></i>
         </a>
       </div>
     </div>
     <div class="columns is-multiline">
       <div v-for="product in products" :key="product.id" class="column is-one-quarter">
-        <product :value="product"></product>
+        <product :value="product" @edit="openForm(product)"></product>
       </div>
     </div>
     <jump-top></jump-top>
+    <form-modal v-if="formModal.active" v-bind="formModal" @close="formModal.active = false"></form-modal>
   </section>
 </template>
 
@@ -27,23 +28,22 @@ import Product from '@/components/product.vue'
 import BasePage from '@/components/base-page'
 import Back from '@/components/back.vue'
 import JumpTop from '@/components/jump-top.vue'
+import FormModal from './-form-modal.vue'
+import ProductModel from '@/models/product'
 
 const booksModule = namespace('books')
 
 @Component({
-  components: { Product, Back, JumpTop },
+  components: { Product, Back, JumpTop, FormModal },
 })
 export default class Books extends BasePage {
   @booksModule.Getter('products')
   products
+  formModal = { active: false, id: null }
 
-  beforeMount() {}
-
-  head() {
-    return {
-      title: 'タイトル/作者',
-      meta: [],
-    }
+  async openForm(product: ProductModel) {
+    this.formModal.id = product && product.id
+    this.formModal.active = true
   }
 }
 </script>

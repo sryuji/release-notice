@@ -23,13 +23,13 @@
         </div>
       </div>
       <footer class="card-footer">
-        <div class="card-footer-item">
-          <a class="" href="" target="_blank">
+        <div class="card-footer-item shop-logo-box">
+          <a class="shop-logo" href="" target="_blank">
             amazon
           </a>
         </div>
-        <div class="card-footer-item">
-          <a class="" href="" target="_blank">
+        <div class="card-footer-item shop-logo-box">
+          <a class="shop-logo" href="" target="_blank">
             楽天
           </a>
         </div>
@@ -58,5 +58,15 @@ export default class ItemView extends Vue {
   padding-left: 0.3rem;
   font-size: 18px;
   font-weight: bold;
+}
+
+.shop-logo-box {
+  padding: 8px 12px;
+}
+
+.shop-logo {
+  width: 100%;
+  text-align: center;
+  color: $grey-dark;
 }
 </style>

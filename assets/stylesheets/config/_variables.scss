@@ -16,9 +16,9 @@ $danger-invert: findColorInvert($danger);
 $background: #edebe3;
 $body-background-color: $background;
 $body-size: 16px;
-$family-primary: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro",
-  "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック",
-  "MS PGothic", sans-serif;
+$family-primary: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial,
+  YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, "メイリオ",
+  Meiryo, sans-serif;
 $border: $grey-lighter;
 $border-hover: $grey-light;
 

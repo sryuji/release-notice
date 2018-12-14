@@ -2,7 +2,7 @@ import { GetterTree } from 'vuex'
 import RootState from '@/models/state'
 import BooksState from '@/models/books/state'
 import Item from '@/models/item'
-import { sortItems } from '@/store/-helpers'
+import { sortItems } from '@/store/-helpers/items'
 import Product from '@/models/product'
 
 export default {
@@ -17,9 +17,7 @@ export default {
   products(state): Product[] {
     return state.products
   },
-  findProduct(state, getters): Function {
-    return (id): Product => {
-      return getters.products.find(r => r.id === id)
-    }
+  findProduct(state): Function {
+    return (id): Product => state.products.find(r => r.id === id)
   },
 } as GetterTree<BooksState, RootState>

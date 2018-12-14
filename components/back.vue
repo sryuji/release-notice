@@ -17,8 +17,6 @@ export default class Back extends Vue {
   route: object
 
   back() {
-    console.log('back')
-    console.log(this.$route.params)
     if (this.history) {
       this.$router.back()
     } else {

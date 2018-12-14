@@ -18,7 +18,7 @@
           </nuxt-link>
         </div>
         <div class="card-footer-item">
-          <a href="" @click.stop.prevent="openSettingModal">
+          <a href="" @click.stop.prevent="$emit('edit')">
             設定
           </a>
         </div>
@@ -37,7 +37,6 @@ import { ProductType } from '@/models/enums'
 export default class ProductView extends Vue {
   @Prop()
   value!: Product
-  settingModal = { active: false }
 
   get query(): ProductQuery {
     return this.value.query
@@ -53,10 +52,6 @@ export default class ProductView extends Vue {
         return { name: 'movies-id', params: { id: this.value.id } }
     }
     return null
-  }
-
-  openSettingModal(): void {
-    this.settingModal.active = true
   }
 }
 </script>
